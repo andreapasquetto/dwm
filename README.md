@@ -9,3 +9,4 @@ A dynamic window manager for X written in C.
 - [hide-vacant-tags](https://dwm.suckless.org/patches/hide_vacant_tags)
 - [restartsig](https://dwm.suckless.org/patches/restartsig)
 - [shiftviewclients](https://github.com/bakkeby/patches/wiki/shiftviewclients)
+- [statuscmd and statuscmd-signal](https://dwm.suckless.org/patches/statuscmd)
