@@ -11,3 +11,4 @@ A dynamic window manager for X written in C.
 - [shiftviewclients](https://github.com/bakkeby/patches/wiki/shiftviewclients)
 - [statuscmd and statuscmd-signal](https://dwm.suckless.org/patches/statuscmd)
 - [swallow](https://dwm.suckless.org/patches/swallow)
+- [vanitygaps](https://dwm.suckless.org/patches/vanitygaps)
