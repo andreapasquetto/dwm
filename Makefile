@@ -19,8 +19,6 @@ options:
 
 ${OBJ}: config.h config.mk
 
-config.h: config.h
-
 dwm: ${OBJ}
 	${CC} -o $@ ${OBJ} ${LDFLAGS}
 

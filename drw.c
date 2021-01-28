@@ -163,7 +163,7 @@ static void xfont_free(Fnt *font)
   free(font);
 }
 
-Fnt *drw_fontset_create(Drw *drw, const char *fonts[], size_t fontcount)
+Fnt *drw_fontset_create(Drw *drw, char *fonts[], size_t fontcount)
 {
   Fnt *cur, *ret = NULL;
   size_t i;
@@ -195,15 +195,13 @@ void drw_clr_create(Drw *drw, Clr *dest, const char *clrname)
 {
   if (!drw || !dest || !clrname)
     return;
-  if (!XftColorAllocName(drw->dpy, DefaultVisual(drw->dpy, drw->screen),
-                         DefaultColormap(drw->dpy, drw->screen),
-                         clrname, dest))
+  if (!XftColorAllocName(drw->dpy, DefaultVisual(drw->dpy, drw->screen), DefaultColormap(drw->dpy, drw->screen), clrname, dest))
     die("error, cannot allocate color '%s'", clrname);
 }
 
 /* Wrapper to create color schemes. The caller has to call free(3) on the
  * returned color scheme when done using it. */
-Clr *drw_scm_create(Drw *drw, const char *clrnames[], size_t clrcount)
+Clr *drw_scm_create(Drw *drw, char *clrnames[], size_t clrcount)
 {
   size_t i;
   Clr *ret;
@@ -267,9 +265,7 @@ int drw_text(Drw *drw, int x, int y, unsigned int w, unsigned int h, unsigned in
   {
     XSetForeground(drw->dpy, drw->gc, drw->scheme[invert ? ColFg : ColBg].pixel);
     XFillRectangle(drw->dpy, drw->drawable, drw->gc, x, y, w, h);
-    d = XftDrawCreate(drw->dpy, drw->drawable,
-                      DefaultVisual(drw->dpy, drw->screen),
-                      DefaultColormap(drw->dpy, drw->screen));
+    d = XftDrawCreate(drw->dpy, drw->drawable, DefaultVisual(drw->dpy, drw->screen), DefaultColormap(drw->dpy, drw->screen));
     x += lpad;
     w -= lpad;
   }
@@ -320,8 +316,7 @@ int drw_text(Drw *drw, int x, int y, unsigned int w, unsigned int h, unsigned in
         if (render)
         {
           ty = y + (h - usedfont->h) / 2 + usedfont->xfont->ascent;
-          XftDrawStringUtf8(d, &drw->scheme[invert ? ColBg : ColFg],
-                            usedfont->xfont, x, ty, (XftChar8 *)buf, len);
+          XftDrawStringUtf8(d, &drw->scheme[invert ? ColBg : ColFg], usedfont->xfont, x, ty, (XftChar8 *)buf, len);
         }
         x += ew;
         w -= ew;
