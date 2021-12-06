@@ -20,3 +20,4 @@ A dynamic window manager for X written in C.
 
 - [actualfullscreen](https://dwm.suckless.org/patches/actualfullscreen)
 - [cyclelayouts](https://dwm.suckless.org/patches/cyclelayouts)
+- [restartsig](https://dwm.suckless.org/patches/restartsig)
