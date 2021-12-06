@@ -15,3 +15,7 @@ A dynamic window manager for X written in C.
     ```sh
     make && make clean install
     ```
+
+## Patches
+
+- [actualfullscreen](https://dwm.suckless.org/patches/actualfullscreen)
