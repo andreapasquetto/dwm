@@ -22,3 +22,4 @@ A dynamic window manager for X written in C.
 - [cyclelayouts](https://dwm.suckless.org/patches/cyclelayouts)
 - [restartsig](https://dwm.suckless.org/patches/restartsig)
 - [shiftviewclients](https://github.com/bakkeby/patches/wiki/shiftviewclients)
+- [statuscmd](https://dwm.suckless.org/patches/statuscmd)
