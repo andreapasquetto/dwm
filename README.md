@@ -21,6 +21,7 @@ A dynamic window manager for X written in C.
 ## Features and Patches
 
 - Autostart of `dwmblocks`
+- Support for color fonts
 - [actualfullscreen](https://dwm.suckless.org/patches/actualfullscreen)
 - [cyclelayouts](https://dwm.suckless.org/patches/cyclelayouts)
 - [restartsig](https://dwm.suckless.org/patches/restartsig)
