@@ -2,6 +2,8 @@
 
 A dynamic window manager for X written in C.
 
+> This program is meant to be used with [this](https://github.com/andreapasquetto/dwmblocks) status bar.
+
 ## Installation
 
 1. Clone the repository:
@@ -16,8 +18,9 @@ A dynamic window manager for X written in C.
     make && make clean install
     ```
 
-## Patches
+## Features and Patches
 
+- Autostart of `dwmblocks`
 - [actualfullscreen](https://dwm.suckless.org/patches/actualfullscreen)
 - [cyclelayouts](https://dwm.suckless.org/patches/cyclelayouts)
 - [restartsig](https://dwm.suckless.org/patches/restartsig)
