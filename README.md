@@ -21,10 +21,12 @@ A dynamic window manager for X written in C.
    make && make clean install
    ```
 
+> This build does not block color fonts from being displayed in the status bar, but [`libxft-bgra`](https://aur.archlinux.org/packages/libxft-bgra/) is needed in order to mitigate rendering issues.
+
 ## Features and Patches
 
 - Autostart of `dwmblocks`
-- Support for color fonts
+- Support for color fonts (with `libxft-bgra`, otherwise the build will crash)
 - [actualfullscreen](https://dwm.suckless.org/patches/actualfullscreen)
 - [cyclelayouts](https://dwm.suckless.org/patches/cyclelayouts)
 - [restartsig](https://dwm.suckless.org/patches/restartsig)
