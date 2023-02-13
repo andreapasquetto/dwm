@@ -42,10 +42,12 @@ static const Layout layouts[] = {
 #define MODKEY Mod4Mask
 #define ALTKEY Mod1Mask
 #define TAGKEYS(KEY,TAG) \
-	{ MODKEY,                           KEY, view,       { .ui = 1 << TAG } }, \
-	{ MODKEY | ControlMask,             KEY, toggleview, { .ui = 1 << TAG } }, \
-	{ MODKEY | ShiftMask,               KEY, tag,        { .ui = 1 << TAG } }, \
-	{ MODKEY | ControlMask | ShiftMask, KEY, toggletag,  { .ui = 1 << TAG } },
+	{ MODKEY,                           KEY, view,        { .ui = 1 << TAG } }, \
+	{ MODKEY | ControlMask,             KEY, toggleview,  { .ui = 1 << TAG } }, \
+	{ MODKEY | ShiftMask,               KEY, tag,         { .ui = 1 << TAG } }, \
+	{ MODKEY | ControlMask | ShiftMask, KEY, toggletag,   { .ui = 1 << TAG } }, \
+  { ALTKEY,                           KEY, focusnthmon, { .i = TAG }       }, \
+  { ALTKEY | ShiftMask,               KEY, tagnthmon,   { .i = TAG }       },
 
 static Key keys[] = {
 	TAGKEYS(XK_1, 0)
